@@ -1,0 +1,681 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --grayishBlue: hsl(233, 8%, 62%);
+    --lightGrayishBlue: hsl(220, 16%, 96%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --darkBlue: hsl(233, 26%, 24%);
+    --limeGreen: hsl(136, 65%, 51%);
+    --brightCyan: hsl(192, 70%, 51%);
+}
+
+body{
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.benefit h1, .details h1, .why-list > div h2, .lastest-articles h1, .card-articles .card-title{
+    color:var(--darkBlue);
+}
+.benefit h1, .details h1,.lastest-articles h1{
+    font-size: 30px;
+}
+.details h1{
+    margin-bottom: 20px;
+}
+    
+.why-list > div p, span, .details p, .benefit p{
+    font-size: 0.75em;
+    color: var(--grayishBlue);
+}
+.why-list > div h2{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.card-articles .card-title{
+    font-size: 13px;
+}
+.ft-nav-1 li a, .ft-nav-2 li a, .ft-two h4 {
+    font-size: 14px;
+}
+a{
+    text-decoration: none; 
+ }
+
+li {
+    list-style-type: none;
+ }
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    background-color: var(--white);
+    width: 100vw;
+    z-index: 2;
+    position: absolute;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; 
+}
+
+.top-bar .navigation li{
+    display: inline-block;
+}
+
+.top-bar .navigation li a{
+    position: relative;
+    margin-left: 20px;
+    color: var(--grayishBlue);
+
+}
+
+.top-bar .navigation li a::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 0px;
+    height: 4px;
+    bottom: -35px;
+    background-color:var(--limeGreen);
+    transition: all .5s;
+}
+
+.top-bar .navigation li a:hover::after{
+    width: 100%;
+
+}
+
+.openMenu, .closeMenu{
+    display: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor:pointer;
+    font-size: 3rem;
+}
+
+
+
+.digital-banking{
+    background-color: var(--veryLightGray);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    height: auto; /*work on this*/
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    transform: translate(25%, 10%);
+}
+
+.request-invite-btn{
+    display: grid;
+    border: none;
+    outline: none;
+    all: unset;
+    width: 7em;
+    background: linear-gradient(to right,  hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    color: var(--white);
+    margin: 20px 0;
+    padding: 10px 40px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.image-mockup{
+    background: url("bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x:50px;
+    background-position-y:-50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#image-mockup-m{
+    display: none;
+}
+
+.mockup-img{
+    width: 80%;
+    transform: translate(100px, 20px);
+}
+
+.why-easybank{
+    padding: 50px 50px;
+    background-color: var(--lightGrayishBlue);
+    
+}
+
+.benefit{
+    position:relative;
+    padding-bottom: 20px;
+    width: 50vw;
+}
+
+.benefit h1{ 
+    margin: 20px 0;
+}
+
+.why-easybank .why-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+}
+
+.why-list > div img{
+    padding: 15px 0;
+}
+
+.why-list > div h2{
+    padding: 15px 0;
+}
+
+.lastest-articles{
+    padding: 100px 50px;
+    background: var(--veryLightGray);
+}
+
+.lastest-articles h1{
+    margin-bottom: 40px;
+}
+
+.articles{
+    display: flex;
+    justify-content: space-between;
+    gap:1em;
+}
+.articles .card-articles{
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card-img{
+    width: 100%;
+    height: 200px;
+    padding-bottom: 15px;
+}
+
+.card-body{
+    padding: 20px;
+}
+
+.card-articles .posted-by{
+    margin:10px 0;
+} 
+
+.card-articles .card-title{
+    padding: 10px 0;
+}
+
+footer{
+    background-color: var(--darkBlue);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+
+.ft-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; 
+    flex-basis: 50%;
+}
+
+footer ul{
+    list-style: none;
+    padding: 16px 0;
+}
+
+.social-link{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column; 
+}
+
+.social-link-list li{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.ft-nav-1, .ft-nav-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ft-nav-1 li, .ft-nav-2 li{
+    padding: 10px 0;
+}
+
+.ft-nav-1 li a, .ft-nav-2 li a{
+    color: var(--lightGrayishBlue);
+}
+
+.ft-two{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.ft-two h4 {
+    color: var(--grayishBlue);
+}
+.ft-nav-1 li a:hover,.ft-nav-2 li a:hover, .card-body h4:hover{
+    color: var(--limeGreen);
+    font-weight: bolder;
+}
+.card-body h4:hover{
+    cursor: pointer;
+}
+.ft-one .social-link .social-link-list img:hover{
+    background-color: var(--limeGreen);
+}
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:900px) {
+   
+    .details{
+        width: 80%;
+        transform: translate(25%, 20%);
+    }
+    
+    .details h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .image-mockup{
+        background-position-y:-30px;   
+    } 
+}
+
+@media screen and (max-width:868px) {
+   
+   /* .why-easybank .benefit {
+        padding-bottom: 60px;
+    }
+    .why-easybank .why-list{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.5em;
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    
+    .why-easybank .why-list > div{
+        width: 100%;
+    }
+
+    .why-easybank .why-list .wrap{
+        width: 100%;
+    }*/
+
+   
+    .articles{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:1em;
+        max-width: 100%;
+    }
+    .articles .card-articles{
+        width: 45%;
+    }
+    .card-head img{
+        width: 100%;
+        height: 200px;
+        padding-bottom: 15px;
+    }
+    
+}
+@media screen and (max-width:770px) {
+    .details{
+        width: 80%;
+        transform: translate(25%, 20%);
+    }
+    
+    .details h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .image-mockup{
+        background-position-y:-10px;   
+    } 
+
+    footer, .ft-nav-1, .ft-nav-2{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ft-one{
+        flex-direction: column;
+    }
+    
+    .social-link-list{
+        display: flex;
+    }
+    .ft-nav-1 li, .ft-nav-2 li{
+        margin-top: 20px 0;
+        text-align: center;
+        
+    }
+    .ft-nav-2{
+        margin-top: -10px;
+    }
+    
+    .ft-two, .ft-nav-1 li, .ft-nav-2 li, .social-link-list, .ft-one, footer, .ft-nav-1, .ft-nav-2{
+        justify-content: center;
+        align-items: center;
+    }
+    .ft-two h4{
+    font-size: 15px;
+    }
+}
+
+@media screen and (max-width:762px){
+    
+    .top-bar{
+        padding: 20px 40px;
+       } 
+    .top-bar .navigation{
+        position: absolute;
+        transform: translate(10%, 0px);
+        display:none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 80%;
+        margin: 0 auto;
+        padding: 40px 10px;
+        border-radius: 15px;
+        text-align: center;
+        transition: all .5s ease-in-out;
+        opacity:2;  
+        
+        
+    }
+    
+   
+    
+    .navigation li {
+        margin: 20px 0;
+    }
+
+    .top-bar .navigation li a{
+        color: var(--darkBlue);
+        font-weight: 900;
+        font-size: 17px;
+        margin: 0;
+    }
+    
+    .navigation li a::after{
+        bottom: -40px;
+    }
+
+ 
+
+    .top-bar .request-invite-btn{
+        display: none;
+    }
+
+    .openMenu{
+        display:block;
+    }
+
+    .closeMenu{
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+  
+@media screen and (max-width:696px) {
+    .why-easybank .benefit {
+        padding-bottom: 60px;
+    }
+    .why-easybank .why-list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        gap: 1.5em;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .why-easybank .why-list > div{
+        width: 45%;
+    }
+
+    .why-easybank .why-list .wrap{
+        width: 100%;
+        position: relative;
+    }
+    .why-easybank .why-list .wrap p, .why-easybank .why-list .wrap h2{
+        text-align: center;
+    }
+    .why-easybank .why-list .wrap img{
+        transform: translate(110%, 0);
+    }
+}
+
+@media screen and (max-width:647px) {
+    .top-bar .navigation{
+        position: absolute;
+        transform: translate(50px, 15px);
+    }
+    
+}
+@media screen and (max-width:646px) {
+    
+    .top-bar .navigation{
+        position: absolute;
+        transform: translate(30px, 15px);
+    }
+    .digital-banking{
+   
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        background: hsl(220, 16%, 96%);
+    }
+    .details{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        transform: translate(0px, 60px);
+        padding:0 40px;
+    }
+    
+    .image-mockup, .mockup-img{
+        display: none;
+    }
+        
+    #image-mockup-m{
+        background: url("bg-intro-mobile.svg");
+        display: flex;
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        min-height: 28.2rem; 
+    }
+    
+    #image-mockup-m::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-image: url("images/image-mockups.png");
+        background-position: center top -40px;
+        background-repeat: no-repeat;
+        background-size: 350px;
+    }
+   .why-easybank .benefit{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+   }
+   .why-easybank .benefit h1{
+    width: 100%;
+    font-size: 25px;
+   }
+   
+    .why-easybank .why-list .wrap img{
+    transform: translate(90%, 0);
+    }
+}
+
+@media screen and (max-width:570px) {
+    
+    .top-bar .navigation{
+        position: absolute;
+        transform: translate(10px, 15px);
+    }
+    .why-list > div p, .details p, .benefit p, span{
+        font-size: 13px;
+    }
+    .lastest-articles{
+        flex-direction: column;
+    }
+    .articles{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .articles .card-articles{
+        width: 100%;
+    }
+    .card-img{
+        height: 300px;
+    }
+    .card-body{
+        padding: 10px 20px 40px 20px;
+    }
+}
+
+@media screen and (max-width:524px) {
+    .why-easybank .why-list .wrap img{
+        transform: translate(60%, 0);
+    }
+}
+@media screen and (max-width:470px){
+
+    .why-easybank .why-list{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        gap: 1.5em;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .why-easybank .why-list > div{
+        width: 100%;
+    }
+
+    .why-easybank .why-list .wrap{
+        width: 100%;
+        position: relative;
+    }
+    .why-easybank .why-list .wrap p, .why-easybank .why-list .wrap h2{
+        text-align: center;
+    }
+    .why-easybank .why-list .wrap img{
+        transform: translate(180%, 0);
+    }
+    .ft-two h4{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:460px){
+    .why-easybank .why-list .wrap img{
+        transform: translate(170%, 0);
+    }
+}
+@media screen and (max-width:432px){
+    .why-easybank .why-list .wrap img{
+        transform: translate(150%, 0);
+    }
+}
+@media screen and (max-width:394px){
+    .why-easybank .why-list .wrap img{
+        transform: translate(130%, 0);
+    }
+}
+@media screen and (max-width:372px){
+    .why-easybank .why-list .wrap img{
+        transform: translate(120%, 0);
+    }
+}
+@media screen and (max-width:358px){
+    .why-easybank .why-list .wrap img{
+        transform: translate(110%, 0);
+    }
+}
+@media screen and (max-width:350px){
+    .why-easybank .why-list .wrap img{
+        transform: translate(100%, 0);
+    }
+}
+  
+  
+    
+   
+   
+   
+   
+    
+   
+  
+
+
+    
+        
